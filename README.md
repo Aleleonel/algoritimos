@@ -31,5 +31,8 @@ rapidamente seu resultado. São eles:
 2° caso) Quando p = 0: resultado deve ser 1
 3° caso) Quando p = 1: resultado deve ser n
 
+# remasterBinomial
+otimização do codigo e inicio da implementação de uma rotina de testes
+
 # Temperatura
 Converte temperatura fahrenheit em graus Celsius

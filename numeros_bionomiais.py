@@ -36,5 +36,5 @@ def binomial(n, p):
             print 'O coeficiente binomial é {}'.format(binomial)
 
 
-bino = binomial(8, 3)
+bino = binomial(-1,-1)
 
