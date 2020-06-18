@@ -23,15 +23,18 @@ def binomial(n, p):
     # e fatoração deste resultado
     n_p = n-p
     contador_np = n_p
-    while contador_np > 1:
-        contador_np -= 1
-        n_p = n_p * contador_np
-    # print n_p
-
-    # Calcula a expressão binomial
-    binominal = (numerador)/(denominador * n_p)
-
-    print binominal
+    if numerador == denominador or denominador == 0:
+        print 'O coeficiente binomial é {}'.format(1)
+    else:
+        if n_p > 0:
+            while contador_np > 1:
+                contador_np -= 1
+                n_p = n_p * contador_np
+            # print n_p
+            # Calcula a expressão binomial
+            binomial = (numerador) / (denominador * n_p)
+            print 'O coeficiente binomial é {}'.format(binomial)
 
 
 bino = binomial(8, 3)
+
