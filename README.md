@@ -1,4 +1,6 @@
 # algoritimos
+Atualizado para python 3.6
+
 Estudos com algoritmos e é claro mais python
 
 # Bhascara:

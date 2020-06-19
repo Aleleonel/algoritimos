@@ -1,7 +1,3 @@
-#!/usr/bin/env python3
-# coding=utf-8
-
-
 def binomial(n, p):
 
     contador = numerador = n
@@ -24,7 +20,7 @@ def binomial(n, p):
     n_p = n-p
     contador_np = n_p
     if numerador == denominador or denominador == 0:
-        print 'O coeficiente binomial é {}'.format(1)
+        print(f'O coeficiente binomial é {1}')
     else:
         if n_p > 0:
             while contador_np > 1:
@@ -33,7 +29,7 @@ def binomial(n, p):
             # print n_p
             # Calcula a expressão binomial
             binomial = (numerador) / (denominador * n_p)
-            print 'O coeficiente binomial é {}'.format(binomial)
+            print(f'O coeficiente binomial é {binomial}')
 
 
 bino = binomial(-1,-1)

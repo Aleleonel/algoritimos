@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-# coding=utf-8
-
 import random
 
 
@@ -29,7 +26,7 @@ def adjacent_number():
                 final += 1
         cont += 1
 
-    print'Lista dos adjacentes {}'.format(lista_adjacente)
+    print(f'Lista dos adjacentes {lista_adjacente}')
 
     return -1
 

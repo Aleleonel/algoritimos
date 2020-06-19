@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# coding=utf-8
 import math
 """
 Essa fórmula nada mais é do que um método para encontrar as raízes reais de uma equação do segundo grau
@@ -23,27 +21,27 @@ def bhaskara(a, b, c):
     x1 = x2 = 0
     delta = (b**2) - (4 * a * c)
     if delta < 0:
-        print'Delta é igual a ===> {}'.format(delta)
-        print'A equação não possui resultados reais;'
+        print(f'Delta é igual a ===> {delta}')
+        print('A equação não possui resultados reais;')
 
     elif delta == 0:
-        print'A equação possui apenas um resultado\n' \
-             ' real ou possui dois resultados iguais'
+        print('A equação possui apenas um resultado\n' \
+             ' real ou possui dois resultados iguais')
         linha1 = -(b + (math.sqrt(delta)))
         x1 = (linha1) / (2 * a)
 
     else:
         if delta > 0:
-            print'Delta é igual a ===> {}'.format(delta)
-            print'A equação possui dois resultados distintos reais.\n'
+            print(f'Delta é igual a ===> {delta}')
+            print('A equação possui dois resultados distintos reais.')
             linha1 = -(b + (math.sqrt(delta)))
             x1 = (linha1) / (2 * a)
 
             linha2 = -(b - (math.sqrt(delta)))
             x2 = (linha2) / (2 * a)
 
-    print'X1 = {}'.format(x1)
-    print'X2 = {}'.format(x2)
+    print(f'X1 = {x1}')
+    print(f'X2 = {x2}')
 
     return -1
 
