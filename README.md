@@ -16,6 +16,10 @@ possui dois resultados iguais (essas duas afirmações são equivalentes);
 Portanto, para calcular as raízes de uma equação do segundo grau,
 primeiramente calcule o valor numérico de Δ.
 
+# remaster Bhascara com funções
+correção de exercicicos (logica ok)
+
+
 # coeficiente binomial 
 Chamamos de coeficiente binomial ou número binomial a relação estabelecida 
 entre dois números naturais n e p, tais que n ≥ p, indicada por  . 
@@ -38,3 +42,7 @@ otimização do codigo e inicio da implementação de uma rotina de testes
 
 # Temperatura
 Converte temperatura fahrenheit em graus Celsius
+
+# introdução a pytest
+aprendendo sobre teste de codigo com pytest
+testes automatizados.

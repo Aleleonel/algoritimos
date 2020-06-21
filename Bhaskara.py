@@ -1,4 +1,5 @@
 import math
+
 """
 Essa fórmula nada mais é do que um método para encontrar as raízes reais de uma equação do segundo grau
 fazendo uso apenas de seus coeficientes. Vale lembrar que coeficiente é o número que multiplica uma incógnita
@@ -12,39 +13,36 @@ em uma equação. exemplo: ax2 + bx + c = 0
 """
 
 
-def bhaskara(a, b, c):
+def delta(a, b, c):
+    return (b ** 2) - (4 * a * c)
 
-    # a = int(input('Digite um numero pra a:'))
-    # b = int(input('Digite um numero pra b:'))
-    # c = int(input('Digite um numero pra c:'))
 
-    x1 = x2 = 0
-    delta = (b**2) - (4 * a * c)
-    if delta < 0:
-        print(f'Delta é igual a ===> {delta}')
+def main():
+    a = int(input('Digite um numero pra a:'))
+    b = int(input('Digite um numero pra b:'))
+    c = int(input('Digite um numero pra c:'))
+    imprime_raizes(a, b, c)
+
+
+def imprime_raizes(a, b, c):
+    d = delta(a, b, c)
+    if d < 0:
         print('A equação não possui resultados reais;')
 
-    elif delta == 0:
-        print('A equação possui apenas um resultado\n' \
-             ' real ou possui dois resultados iguais')
-        linha1 = -(b + (math.sqrt(delta)))
-        x1 = (linha1) / (2 * a)
+    elif d == 0:
+        print('A equação possui apenas um resultado\n'
+              ' real ou possui dois resultados iguais')
+        x1 = -(b + (math.sqrt(delta(a, b, c)))) / (2 * a)
+        print(f'A unica raiz é = {x1}')
 
     else:
-        if delta > 0:
-            print(f'Delta é igual a ===> {delta}')
+        if d > 0:
             print('A equação possui dois resultados distintos reais.')
-            linha1 = -(b + (math.sqrt(delta)))
-            x1 = (linha1) / (2 * a)
-
-            linha2 = -(b - (math.sqrt(delta)))
-            x2 = (linha2) / (2 * a)
-
-    print(f'X1 = {x1}')
-    print(f'X2 = {x2}')
+            x1 = -(b + (math.sqrt(delta(a, b, c)))) / (2 * a)
+            x2 = -(b - (math.sqrt(delta(a, b, c)))) / (2 * a)
+            print(f'A primeria raiz é = {x1}')
+            print(f'A segunda raiz é  = {x2}')
 
     return -1
 
-
-bk = bhaskara(10, 10, 10)
-
+principal = main()
