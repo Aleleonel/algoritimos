@@ -1,5 +1,4 @@
 unidades = {
-    '0': ' ',
     '1': 'Um ',
     '2': 'Dois',
     '3': 'Tres',
@@ -44,18 +43,49 @@ milhar = {
     '7': 'Sete Mil',
     '8': 'Oito Mil',
     '9': 'Nove Mil',
+    '10': 'Dez Mil',
     }
 
-lista = ''
-lista2 = ''
-lista3 = ''
 cont = 0
 idx = 0
 spell =[]
 
-numero = (input('digite um numero Entre 1 e 2000: '))
+numero = (input('digite um numero Entre 1 e 9999: '))
 tamanho = int(len(numero))
 
+# Caso Unidade de indx 1 então, indx == 0 cont == 0 e tamanho é revertido para zero
+# para não interferir nos outros cases
+if tamanho == 1:
+    tamanho = 0
+    for k, v in unidades.items():
+        unico = k
+        for un in unico:
+            for n in numero:
+                if un == numero[0] and cont == 0:
+                    spell.append(v)
+                    cont += 1
+
+# Caso Dezena indx == 0:1 cont == 0 e tamanho revertido para zero para não interferir
+#  nos outros cases
+if tamanho == 2:
+    tamanho = 0
+    for k, v in dezenas.items():
+        dezen = k
+        for l2 in dezen:
+            for n in numero:
+                if l2 == numero[0] and cont == 0:
+                    spell.append(v)
+                    cont += 1
+                for k, v in unidades.items():
+                    unico = k
+                    for l3 in unico:
+                        for n in numero:
+                            if l3 == numero[1] and cont == 1:
+                                spell.append(' e ')
+                                spell.append(v)
+                                cont += 1
+
+# Inicia verificação te tamanho do indice para milhar centena, dezenas e unidades
 # Caso Milhar então Milhar indx 0:3 cont == 0
 if tamanho == 4:
     for k, v in milhar.items():
@@ -136,8 +166,6 @@ if tamanho == 1:
                     spell.append(v)
                     cont += 1
                     tamanho -= 1
-
-
 
 print(spell)
 
