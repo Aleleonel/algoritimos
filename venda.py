@@ -13,14 +13,15 @@ compra_realizada = {}
 def compra_itens():
     codigo_do_item = input('digite o código do item: ')
     quantidade = int(input('Digite a quantidade: '))
+    desconto_fixo = int(input('Digite o valor do desconto fixo'))
     for k, v in produtos.items():
         if k == codigo_do_item:
             for kv, vv in valor.items():
                     if kv == codigo_do_item:
-                        cont =0
+                        cont = 0
                         while cont < quantidade:
                             if quantidade >= 3:
-                                valor_total = (vv * quantidade) - 500
+                                valor_total = (vv * quantidade) - desconto_fixo
                                 prazo_de_pagamento(valor_total, quantidade, v)
                                 return quantidade, v
                                 cont += 1
@@ -57,11 +58,11 @@ def prazo_de_pagamento(valor_total, quantidade, v):
             v = v
             imprime(prazo, quantidade, v)
 
-
     return prazo
 
 
-def imprime(prazo, quantidade, v):
+def imprime(prazo, quantidade, v, ):
+
     compra_realizada['qtd'] = quantidade
     compra_realizada['produto'] = v
     compra_realizada['preco'] = prazo
