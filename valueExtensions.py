@@ -11,6 +11,7 @@ unidades = {
     }
 
 dezenas = {
+    '0': '',
     '1': 'Dez',
     '2': 'Vinte',
     '3': 'Trinta',
@@ -138,10 +139,13 @@ elif tamanho == 2:
         for l2 in dezen:
             for n in numero:
                 if l2 == numero[1] and cont == 1:
-                    spell.append(' e ')
-                    spell.append(v)
-                    cont += 1
-                    tamanho -= 1
+                    if numero[1] == 0:
+                        spell.trin(v)
+                        print('aqui')
+                    else:
+                        spell.append(v)
+                        cont += 1
+                        tamanho -= 1
 
 # Caso Milhar então Dezena indx 3:3 cont == 3
 if tamanho == 1 and cont == 3:
@@ -150,7 +154,7 @@ if tamanho == 1 and cont == 3:
         for lu in unida:
             for n in numero:
                 if lu == numero[3] and cont == 3:
-                    spell.append(' e ')
+                    # spell.append(' e ')
                     spell.append(v)
                     cont += 1
                     tamanho -= 1
@@ -168,4 +172,5 @@ if tamanho == 1:
                     tamanho -= 1
 
 print(spell)
+
 

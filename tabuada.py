@@ -1,3 +1,5 @@
+from typing import List
+
 
 def tabuada():
     linha = 1
@@ -13,3 +15,13 @@ def tabuada():
 
 
 tabuada()
+
+
+def tabuada2():
+    linha = 0
+    cont: List[int] = [v*linha for v in range(10)]
+
+    print(cont)
+
+
+tabuada2()
