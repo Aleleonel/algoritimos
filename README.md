@@ -46,3 +46,6 @@ Converte temperatura fahrenheit em graus Celsius
 # introdução a pytest
 aprendendo sobre teste de codigo com pytest
 testes automatizados.
+
+# Convertation
+Converte um arqui .txt em um arquivo json
